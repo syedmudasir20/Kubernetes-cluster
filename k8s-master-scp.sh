@@ -79,7 +79,7 @@ sudo sh -c "curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-
 
 sudo apt-get update
 
-sudo apt-get install -y kubeadm=1.26.1-00 kubelet=1.26.1-00 kubectl=1.26.1-00
+sudo apt-get install -y kubeadm=1.27.1-00 kubelet=1.27.1-00 kubectl=1.27.1-00
 
 sudo apt-mark hold kubelet kubeadm kubectl
 
@@ -88,32 +88,32 @@ sudo apt-mark hold kubelet kubeadm kubectl
 ## to use a different IP address, found in that plugins
 ## readme file.
 
-sleep 3
+#sleep 3
 
 ## This assumes you are not using 192.168.0.0/16 for your host
-sudo kubeadm init --kubernetes-version 1.26.1 --pod-network-cidr 192.168.0.0/16 | sudo tee /var/log/kubeinit.log
+#sudo kubeadm init --kubernetes-version 1.26.1 --pod-network-cidr 192.168.0.0/16 | sudo tee /var/log/kubeinit.log
 
-sleep 5
+#sleep 5
 
-echo "Running the steps explained at the end of the init output for you"
+#echo "Running the steps explained at the end of the init output for you"
 
-mkdir -p $HOME/.kube
+#mkdir -p $HOME/.kube
 
-sleep 2
+#sleep 2
 
-sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+#sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 
-sleep 2
+#sleep 2
 
-sudo chown $(id -u):$(id -g) $HOME/.kube/config
+#sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
-echo "Apply Calico network plugin from ProjectCalico.org"
-echo "If you see an error they may have updated the yaml file. Use a browser, navigate to the site and find the updated file "
-echo
-echo
+#echo "Apply Calico network plugin from ProjectCalico.org"
+#echo "If you see an error they may have updated the yaml file. Use a browser, navigate to the site and find the updated file "
+#echo
+#echo
 
 
-kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml
+#kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml
 
 echo
 echo
