@@ -115,14 +115,14 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 #kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml
 
-echo
-echo
-sleep 15
-echo "You should see this node in the output below"
-echo "It can take up to a minute for node to show Ready status"
-echo
-kubectl get node
-echo
+#echo
+#echo
+#sleep 15
+#echo "You should see this node in the output below"
+#echo "It can take up to a minute for node to show Ready status"
+#echo
+#kubectl get node
+#echo
 
-echo
+#echo
 echo "Script finished. Move to the next step"
