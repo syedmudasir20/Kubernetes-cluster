@@ -91,7 +91,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 #sleep 3
 
 ## This assumes you are not using 192.168.0.0/16 for your host
-#sudo kubeadm init --kubernetes-version 1.26.1 --pod-network-cidr 192.168.0.0/16 | sudo tee /var/log/kubeinit.log
+#sudo kubeadm init --kubernetes-version 1.27.1 --pod-network-cidr 192.168.0.0/16 | sudo tee /var/log/kubeinit.log
 
 #sleep 5
 
